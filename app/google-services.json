@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "361262919606",
+    "project_id": "radientdermat",
+    "storage_bucket": "radientdermat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361262919606:android:7d1594149af94771c39b17",
+        "android_client_info": {
+          "package_name": "com.starkindustries.radientdermat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpmUW-T4CtTmxl2DdsNp-6Y0kz_mDKvZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

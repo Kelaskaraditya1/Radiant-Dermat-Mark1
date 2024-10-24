@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android.material:compose-theme-adapter:1.0.0")
+    implementation("com.google.android.material:compose-theme-adapter:1.2.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
