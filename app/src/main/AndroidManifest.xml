@@ -13,6 +13,9 @@
         android:theme="@style/Theme.RadientDermat"
         tools:targetApi="31">
         <activity
+            android:name=".Frontend.Activity.DashBoardActivity"
+            android:exported="false" />
+        <activity
             android:name=".Frontend.Activity.LoginActivity"
             android:exported="false" />
         <activity

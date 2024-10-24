@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.starkindustries.radientdermat" />
+                  <option name="mobileSdkAppId" value="1:361262919606:android:7d1594149af94771c39b17" />
+                  <option name="projectId" value="radientdermat" />
+                  <option name="projectNumber" value="361262919606" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
