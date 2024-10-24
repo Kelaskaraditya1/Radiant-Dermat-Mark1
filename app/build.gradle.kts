@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -16,6 +18,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("string","API_KEY","")
     }
 
     buildTypes {
@@ -26,6 +29,20 @@ android {
                 "proguard-rules.pro"
             )
         }
+        android {
+            buildTypes {
+                debug {
+                    buildConfigField("String", "API_KEY", "\"AIzaSyBZ0hfk9jCKq6_gV7NJhmfbZIJs9lUDEno\"")
+                }
+                release {
+                    isMinifyEnabled = true
+                    proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+                    buildConfigField("String", "API_KEY", "\"AIzaSyBZ0hfk9jCKq6_gV7NJhmfbZIJs9lUDEno\"")
+                }
+            }
+        }
+
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -40,6 +57,7 @@ android {
 }
 
 dependencies {
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.google.android.material:compose-theme-adapter:1.2.1")
     implementation(libs.androidx.core.ktx)

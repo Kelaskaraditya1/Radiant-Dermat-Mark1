@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Frontend.Fragment.ChatBotFragment">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chat with Dermat Ai!!"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textAppearance="@color/black"
+            android:translationY="20dp">
+        </androidx.appcompat.widget.AppCompatTextView>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If you're not comfortable sharing your problem through a photographic medium, please enter a detailed written description of your issue in the prompt below and click the submit button."
+            android:translationY="35dp"
+            android:textAppearance="@color/black"
+            android:textColor="@color/black"
+            android:textSize="18sp">
+        </androidx.appcompat.widget.AppCompatTextView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:padding="5dp"
+            android:translationY="80dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/promptText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter your problem here"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textAppearance="@color/black"
+                android:textSize="18sp">
+            </com.google.android.material.textfield.TextInputEditText>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#34B3F8"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:textAppearance="@color/white"
+                android:textColor="@color/white"
+                android:textStyle="bold">
+            </androidx.appcompat.widget.AppCompatButton>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:translationY="90dp">
+
+            <TextView
+                android:id="@+id/responseText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+
+        </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
