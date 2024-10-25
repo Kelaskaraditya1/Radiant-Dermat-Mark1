@@ -68,6 +68,11 @@ class LoginActivity : AppCompatActivity() {
         })
         binding.loginButton.setOnClickListener()
         {
+            val view = this.currentFocus
+            if(view!=null){
+                val manager:InputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                manager.hideSoftInputFromWindow(view.windowToken,0)
+            }
             if(TextUtils.isEmpty(binding.loginUsernameText.text.toString().trim()))
             {
                 binding.loginUsernameText.setError("Field is Empty!!")
@@ -105,7 +110,6 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }.addOnFailureListener()
                 {
-                    Toast.makeText(applicationContext, "Check your Internet connection!!", Toast.LENGTH_SHORT).show()
                     Toast.makeText(applicationContext, "Either Email or Password is incorrect.", Toast.LENGTH_SHORT).show()
                 }
         }

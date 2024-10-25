@@ -1,5 +1,4 @@
 package com.starkindustries.radientdermat.Frontend.Activity
-
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -21,7 +20,6 @@ import com.starkindustries.radientdermat.Frontend.Fragment.HomeFragment
 import com.starkindustries.radientdermat.Keys.Keys
 import com.starkindustries.radientdermat.R
 import com.starkindustries.radientdermat.databinding.ActivityDashBoardBinding
-
 class DashBoardActivity : AppCompatActivity() {
     lateinit var binding: ActivityDashBoardBinding
     lateinit var auth: FirebaseAuth
@@ -89,6 +87,11 @@ class DashBoardActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        if(id==android.R.id.home){
+            super.onBackPressed()
+            finish()
+        }
         return super.onOptionsItemSelected(item)
     }
+
 }
