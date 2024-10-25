@@ -1,5 +1,4 @@
 package com.starkindustries.radientdermat.Frontend.Fragment
-
 import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,7 +17,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.starkindustries.radientdermat.R
 import com.starkindustries.radientdermat.databinding.ActivityDashBoardBinding
 import kotlinx.coroutines.runBlocking
-
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"

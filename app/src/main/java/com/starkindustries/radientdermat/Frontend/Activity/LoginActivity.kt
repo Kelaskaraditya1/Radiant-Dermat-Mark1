@@ -102,7 +102,6 @@ class LoginActivity : AppCompatActivity() {
                         val intent = Intent(this,DashBoardActivity::class.java)
                         startActivity(intent)
                         finish()
-                        Toast.makeText(applicationContext, "Salam "+user.displayName.toString().trim()+" bhai!!", Toast.LENGTH_SHORT).show()
                     }
                 }.addOnFailureListener()
                 {

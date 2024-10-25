@@ -62,8 +62,8 @@ class MainActivity : AppCompatActivity() {
             {
                 user=auth.currentUser!!
                 val intent = Intent(this@MainActivity,DashBoardActivity::class.java)
+                Toast.makeText(applicationContext, "Salam "+sharedPreferences.getString(Keys.USERNAME,"").toString().trim()+" bhai!!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
-                Toast.makeText(applicationContext, "Salam "+user.displayName.toString().trim()+" bhai!!", Toast.LENGTH_SHORT).show()
                 finish()
             }
             else

@@ -159,6 +159,8 @@ class RegisterActivity : AppCompatActivity() {
                                                 editor.putBoolean(Keys.LOGIN_STATUS,true)
                                                 editor.apply()
                                                 val intent = Intent(this,DashBoardActivity::class.java)
+                                                editor.putString(Keys.USERNAME,binding.registerUsernameText.text.toString())
+                                                editor.apply()
                                                 startActivity(intent)
                                                 finish()
                                             }

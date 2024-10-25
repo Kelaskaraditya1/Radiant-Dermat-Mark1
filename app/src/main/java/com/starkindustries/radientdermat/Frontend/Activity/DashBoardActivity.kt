@@ -3,6 +3,9 @@ package com.starkindustries.radientdermat.Frontend.Activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
@@ -66,5 +69,26 @@ class DashBoardActivity : AppCompatActivity() {
         } else {
             super.onBackPressed()  // Default back press behavior
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        MenuInflater(applicationContext).inflate(R.menu.toolbar_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id:Int=item.itemId
+        if(id==R.id.logout){
+            sharedPreferences=getSharedPreferences(Keys.SHARED_PREFRENCES_NAME, MODE_PRIVATE)
+            editor=sharedPreferences.edit()
+            editor.putBoolean(Keys.LOGIN_STATUS,false)
+            auth.signOut()
+            val intent = Intent(this@DashBoardActivity,LoginActivity::class.java)
+            editor.apply()
+            startActivity(intent)
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
